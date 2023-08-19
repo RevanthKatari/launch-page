@@ -1,8 +1,37 @@
-#starter Welcome to the Inaugural ceremony
-#scene
-  #curtain
-    %h1
-      %a{:href => "https://ct3.gitam.edu/dashboard/"} Launch Module
-    .ground
-    .left
-    .right
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:800|Roboto+Condensed:700i">
+  <link rel="stylesheet" href="styles.css"> <!-- Make sure to link your CSS file here -->
+  <title>Inaugural Ceremony</title>
+</head>
+<body>
+  <div id="starter" onclick="showTime()">Welcome to the Inaugural ceremony</div>
+  <div id="scene">
+    <div id="curtain">
+      <h1><a href="https://ct3.gitam.edu/dashboard/">Launch Module</a></h1>
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
+    <div class="ground"></div>
+  </div>
+  <script>
+    function showTime() {
+      var curtain = document.getElementById("curtain");
+      curtain.classList.add("open");
+
+      var scene = document.getElementById("scene");
+      scene.classList.add("expand");
+
+      var starter = document.getElementById("starter");
+      starter.classList.add("fade-out");
+
+      setTimeout(function () {
+        starter.style.display = "none";
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
